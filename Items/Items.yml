@@ -1,0 +1,209 @@
+# Comment utiliser: Ajoutez ce fichier dans le dossier Items de MythicMobs et rechargez avec /mm reload pour activer ces loot tables thématiques.
+# Équilibrage: Les objets T1 sont conçus pour offrir un petit bonus de survie, tandis que les objets T2 procurent un avantage notable mais situational.
+# Conseils: Ajustez les chances de drop dans Mobs.yml selon la progression de votre serveur et combinez avec des quêtes ou succès personnalisés.
+
+# Tier T1 - récompenses pour les variantes Plus
+graveWardenCharm:
+  Id: IRON_SWORD
+  Display: '&aAmulette du Gardien'
+  Lore:
+  - '&7Canalise la vigilance des catacombes.'
+  - '&8Bonus: +2 Points de vie max.'
+  Attributes:
+    GENERIC_MAX_HEALTH:
+      Amount: 2
+      Operation: ADD_NUMBER
+      Slot: HAND
+  Options:
+    Unbreakable: true
+
+sharpshotQuiver:
+  Id: ARROW
+  Display: '&aCarquois Affûté'
+  Lore:
+  - '&7Les flèches trouvées gagnent en pénétration.'
+  - '&8Bonus: +10% dégâts à l''arc pendant 30s.'
+  PotionEffects:
+  - INCREASE_DAMAGE 1 600
+  Options:
+    HideFlags: true
+
+venomspinnerFang:
+  Id: FERMENTED_SPIDER_EYE
+  Display: '&aCroc Venimeux'
+  Lore:
+  - '&7Applique Poison I sur les cibles frappées.'
+  Enchantments:
+  - BANE_OF_ARTHROPODS:2
+  Skills:
+  - skill{s=venomspinnerFangProc} ~onUse
+
+chargedSapperPowder:
+  Id: GUNPOWDER
+  Display: '&aPoudre Conductrice'
+  Lore:
+  - '&7Réduit de 20% les dégâts d''explosion entrants.'
+  Attributes:
+    GENERIC_KNOCKBACK_RESISTANCE:
+      Amount: 0.2
+      Operation: ADD_NUMBER
+
+warpedStalkerPearl:
+  Id: ENDER_PEARL
+  Display: '&aPerle Distordue'
+  Lore:
+  - '&7Téléportation plus stable, -1 c&oû?t en vie.'
+  Skills:
+  - skill{s=warpedPearlStabilize} ~onUse
+
+brewMistressSatchel:
+  Id: POTION
+  Display: '&aSacoche de Potions'
+  Options:
+    Color: 125,0,125
+  Lore:
+  - '&7Contient des essences curatives mineures.'
+  PotionEffects:
+  - REGENERATION 0 160
+
+emberSentinelRod:
+  Id: BLAZE_ROD
+  Display: '&aBâton Sentinelle'
+  Lore:
+  - '&7Projette un cône de braises au contact.'
+  Enchantments:
+  - FIRE_ASPECT:1
+  Skills:
+  - skill{s=emberRodCone} ~onHit
+
+tideReaverTrident:
+  Id: TRIDENT
+  Display: '&aTrident du Racleur'
+  Lore:
+  - '&7Frappe avec la force de la marée.'
+  Enchantments:
+  - LOYALTY:2
+  Attributes:
+    GENERIC_ATTACK_DAMAGE:
+      Amount: 2
+      Operation: ADD_NUMBER
+
+sandstalkerCharm:
+  Id: SAND
+  Display: '&aCharme du Traque-Sable'
+  Lore:
+  - '&7Immunité temporaire à l''affamement dans le désert.'
+  PotionEffects:
+  - SATURATION 0 40
+  Options:
+    HideFlags: true
+
+frostboundCloak:
+  Id: LEATHER_CHESTPLATE
+  Display: '&aCape Gelée'
+  Lore:
+  - '&7Réduit les dégâts de projectiles de 10%.'
+  Attributes:
+    GENERIC_ARMOR:
+      Amount: 2
+      Operation: ADD_NUMBER
+  Options:
+    Color: 140,140,255
+
+# Tier T2 - récompenses pour les variantes PlusPlus
+cryptSovereignSigil:
+  Id: NETHERITE_SCRAP
+  Display: '&bSceau du Souverain'
+  Lore:
+  - '&7Confère un bouclier spectral périodique.'
+  Skills:
+  - skill{s=cryptSigilWard} ~onUse
+  Attributes:
+    GENERIC_MAX_HEALTH:
+      Amount: 4
+      Operation: ADD_NUMBER
+
+boneWarlordGreatbow:
+  Id: BOW
+  Display: '&bGrand Arc du Warlord'
+  Lore:
+  - '&7Tire des flèches perforantes.'
+  Enchantments:
+  - POWER:4
+  - PUNCH:2
+  Options:
+    Unbreakable: true
+
+nightWidowVeil:
+  Id: STRING
+  Display: '&bVoile de la Veuve'
+  Lore:
+  - '&7Octroie Invisibilité 5s après un kill.'
+  Skills:
+  - skill{s=nightVeilFade} ~onKill
+
+stormDetonatorCore:
+  Id: HEART_OF_THE_SEA
+  Display: '&bCœur de Tempête'
+  Lore:
+  - '&7Convertit une explosion subie en choc de foudre.'
+  Skills:
+  - skill{s=stormCoreRetaliation} ~onDamaged
+
+voidshadeRelic:
+  Id: DRAGON_BREATH
+  Display: '&bRelique Ombreuse'
+  Lore:
+  - '&7Permet une téléportation courte distance instantanée.'
+  Skills:
+  - skill{s=voidRelicBlink} ~onUse
+
+hexMatriarchGrimoire:
+  Id: ENCHANTED_BOOK
+  Display: '&bGrimoire de la Matriarche'
+  Lore:
+  - '&7Lance un sort d''affliction renforcé.'
+  Enchantments:
+  - VANISHING_CURSE:1
+  Skills:
+  - skill{s=hexMatriarchBurst} ~onUse
+
+infernoArchonHeart:
+  Id: NETHER_STAR
+  Display: '&bCœur d''Archon'
+  Lore:
+  - '&7Déchaîne une nova de flammes lors d''un coup critique.'
+  Skills:
+  - skill{s=infernoHeartNova} ~onCritical
+
+abyssalCorsairHook:
+  Id: FISHING_ROD
+  Display: '&bHameçon Abyssal'
+  Lore:
+  - '&7Attire votre cible vers vous en combat.'
+  Enchantments:
+  - LUCK_OF_THE_SEA:3
+  Skills:
+  - skill{s=abyssalHookPull} ~onHit
+
+dunePharaohCirclet:
+  Id: GOLDEN_HELMET
+  Display: '&bDiadème du Pharaon'
+  Lore:
+  - '&7Projette un mur de sable protecteur.'
+  Skills:
+  - skill{s=duneCircletWall} ~onDamaged
+  Attributes:
+    GENERIC_ARMOR:
+      Amount: 3
+      Operation: ADD_NUMBER
+
+glacierRevenantShard:
+  Id: BLUE_ICE
+  Display: '&bÉclat de Glacier'
+  Lore:
+  - '&7Gèle les ennemis proches lorsque vous tombez sous 4 c&oelig;urs.'
+  Skills:
+  - skill{s=glacierShardFreeze} ~onDamaged
+  Options:
+    HideFlags: true

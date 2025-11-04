@@ -1,0 +1,215 @@
+# Comment utiliser: Placez ce fichier dans RandomSpawns/ puis rechargez MythicMobs pour activer les remplacements naturels.
+# Équilibrage: Les chances sont calibrées pour offrir des rencontres rares mais marquantes; ajustez selon la densité de joueurs.
+# Conseils: Combinez ces spawns avec des conditions régionales ou de temps pour moduler la difficulté par biome.
+
+GraveWardenSpawn:
+  Type: GraveWarden
+  Worlds: world
+  Chance: 0.07
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ZOMBIE}
+  - outside true
+  - time{night=true}
+  - lightlevelbelow 9
+  - maxnearbyentities{a=2;r=64}
+
+CryptSovereignSpawn:
+  Type: CryptSovereign
+  Worlds: world
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ZOMBIE}
+  - outside true
+  - time{night=true}
+  - lightlevelbelow 7
+  - maxnearbyentities{a=1;r=64}
+
+SharpshotSkeletonSpawn:
+  Type: SharpshotSkeleton
+  Worlds: world
+  Chance: 0.06
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SKELETON}
+  - outside true
+  - lightlevelbelow 9
+  - maxnearbyentities{a=3;r=64}
+
+BoneWarlordSpawn:
+  Type: BoneWarlord
+  Worlds: world
+  Chance: 0.01
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SKELETON}
+  - outside true
+  - lightlevelbelow 7
+  - maxnearbyentities{a=1;r=64}
+
+VenomspinnerSpawn:
+  Type: Venomspinner
+  Worlds: world
+  Chance: 0.08
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SPIDER}
+  - outside true
+  - lightlevelbelow 10
+  - maxnearbyentities{a=3;r=64}
+
+NightWidowSpawn:
+  Type: NightWidow
+  Worlds: world
+  Chance: 0.015
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SPIDER}
+  - outside true
+  - lightlevelbelow 8
+  - maxnearbyentities{a=1;r=64}
+
+ChargedSapperSpawn:
+  Type: ChargedSapper
+  Worlds: world
+  Chance: 0.05
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=CREEPER}
+  - outside true
+  - lightlevelbelow 9
+  - maxnearbyentities{a=2;r=64}
+
+StormDetonatorSpawn:
+  Type: StormDetonator
+  Worlds: world
+  Chance: 0.009
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=CREEPER}
+  - outside true
+  - lightlevelbelow 7
+  - maxnearbyentities{a=1;r=64}
+
+WarpedStalkerSpawn:
+  Type: WarpedStalker
+  Worlds: world,world_the_end
+  Chance: 0.06
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ENDERMAN}
+  - outside true
+  - maxnearbyentities{a=2;r=64}
+
+VoidshadeTitanSpawn:
+  Type: VoidshadeTitan
+  Worlds: world,world_the_end
+  Chance: 0.01
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ENDERMAN}
+  - outside true
+  - maxnearbyentities{a=1;r=64}
+
+BrewMistressSpawn:
+  Type: BrewMistress
+  Worlds: world
+  Chance: 0.065
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=WITCH}
+  - outside true
+  - lightlevelbelow 9
+  - maxnearbyentities{a=2;r=64}
+
+HexMatriarchSpawn:
+  Type: HexMatriarch
+  Worlds: world
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=WITCH}
+  - outside true
+  - lightlevelbelow 7
+  - maxnearbyentities{a=1;r=64}
+
+EmberSentinelSpawn:
+  Type: EmberSentinel
+  Worlds: world_nether
+  Chance: 0.075
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=BLAZE}
+  - outside false
+  - maxnearbyentities{a=3;r=64}
+
+InfernoArchonSpawn:
+  Type: InfernoArchon
+  Worlds: world_nether
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=BLAZE}
+  - outside false
+  - maxnearbyentities{a=1;r=64}
+
+TideReaverSpawn:
+  Type: TideReaver
+  Worlds: world
+  Chance: 0.07
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=DROWNED}
+  - inblock{m=WATER}
+  - maxnearbyentities{a=2;r=64}
+
+AbyssalCorsairSpawn:
+  Type: AbyssalCorsair
+  Worlds: world
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=DROWNED}
+  - inblock{m=WATER}
+  - maxnearbyentities{a=1;r=64}
+
+SandstalkerSpawn:
+  Type: Sandstalker
+  Worlds: world
+  Chance: 0.065
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=HUSK}
+  - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
+  - maxnearbyentities{a=2;r=64}
+
+DunePharaohSpawn:
+  Type: DunePharaoh
+  Worlds: world
+  Chance: 0.01
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=HUSK}
+  - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
+  - maxnearbyentities{a=1;r=64}
+
+FrostboundHunterSpawn:
+  Type: FrostboundHunter
+  Worlds: world
+  Chance: 0.06
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=STRAY}
+  - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}
+  - maxnearbyentities{a=2;r=64}
+
+GlacierRevenantSpawn:
+  Type: GlacierRevenant
+  Worlds: world
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=STRAY}
+  - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}
+  - maxnearbyentities{a=1;r=64}
