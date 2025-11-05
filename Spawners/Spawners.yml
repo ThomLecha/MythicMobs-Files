@@ -10,9 +10,6 @@ GraveWardenSpawn:
   Conditions:
   - mobtype{t=ZOMBIE}
   - outside true
-  - time{night=true}
-  - lightlevelbelow 9
-  - maxnearbyentities{a=2;r=64}
 
 CryptSovereignSpawn:
   Type: CryptSovereign
@@ -22,9 +19,6 @@ CryptSovereignSpawn:
   Conditions:
   - mobtype{t=ZOMBIE}
   - outside true
-  - time{night=true}
-  - lightlevelbelow 7
-  - maxnearbyentities{a=1;r=64}
 
 SharpshotSkeletonSpawn:
   Type: SharpshotSkeleton
@@ -34,8 +28,6 @@ SharpshotSkeletonSpawn:
   Conditions:
   - mobtype{t=SKELETON}
   - outside true
-  - lightlevelbelow 9
-  - maxnearbyentities{a=3;r=64}
 
 BoneWarlordSpawn:
   Type: BoneWarlord
@@ -45,8 +37,6 @@ BoneWarlordSpawn:
   Conditions:
   - mobtype{t=SKELETON}
   - outside true
-  - lightlevelbelow 7
-  - maxnearbyentities{a=1;r=64}
 
 VenomspinnerSpawn:
   Type: Venomspinner
@@ -56,8 +46,6 @@ VenomspinnerSpawn:
   Conditions:
   - mobtype{t=SPIDER}
   - outside true
-  - lightlevelbelow 10
-  - maxnearbyentities{a=3;r=64}
 
 NightWidowSpawn:
   Type: NightWidow
@@ -67,8 +55,6 @@ NightWidowSpawn:
   Conditions:
   - mobtype{t=SPIDER}
   - outside true
-  - lightlevelbelow 8
-  - maxnearbyentities{a=1;r=64}
 
 ChargedSapperSpawn:
   Type: ChargedSapper
@@ -78,8 +64,6 @@ ChargedSapperSpawn:
   Conditions:
   - mobtype{t=CREEPER}
   - outside true
-  - lightlevelbelow 9
-  - maxnearbyentities{a=2;r=64}
 
 StormDetonatorSpawn:
   Type: StormDetonator
@@ -89,8 +73,6 @@ StormDetonatorSpawn:
   Conditions:
   - mobtype{t=CREEPER}
   - outside true
-  - lightlevelbelow 7
-  - maxnearbyentities{a=1;r=64}
 
 WarpedStalkerSpawn:
   Type: WarpedStalker
@@ -100,7 +82,6 @@ WarpedStalkerSpawn:
   Conditions:
   - mobtype{t=ENDERMAN}
   - outside true
-  - maxnearbyentities{a=2;r=64}
 
 VoidshadeTitanSpawn:
   Type: VoidshadeTitan
@@ -110,7 +91,6 @@ VoidshadeTitanSpawn:
   Conditions:
   - mobtype{t=ENDERMAN}
   - outside true
-  - maxnearbyentities{a=1;r=64}
 
 BrewMistressSpawn:
   Type: BrewMistress
@@ -120,8 +100,6 @@ BrewMistressSpawn:
   Conditions:
   - mobtype{t=WITCH}
   - outside true
-  - lightlevelbelow 9
-  - maxnearbyentities{a=2;r=64}
 
 HexMatriarchSpawn:
   Type: HexMatriarch
@@ -131,8 +109,6 @@ HexMatriarchSpawn:
   Conditions:
   - mobtype{t=WITCH}
   - outside true
-  - lightlevelbelow 7
-  - maxnearbyentities{a=1;r=64}
 
 EmberSentinelSpawn:
   Type: EmberSentinel
@@ -142,7 +118,6 @@ EmberSentinelSpawn:
   Conditions:
   - mobtype{t=BLAZE}
   - outside false
-  - maxnearbyentities{a=3;r=64}
 
 InfernoArchonSpawn:
   Type: InfernoArchon
@@ -152,7 +127,6 @@ InfernoArchonSpawn:
   Conditions:
   - mobtype{t=BLAZE}
   - outside false
-  - maxnearbyentities{a=1;r=64}
 
 TideReaverSpawn:
   Type: TideReaver
@@ -162,7 +136,6 @@ TideReaverSpawn:
   Conditions:
   - mobtype{t=DROWNED}
   - inblock{m=WATER}
-  - maxnearbyentities{a=2;r=64}
 
 AbyssalCorsairSpawn:
   Type: AbyssalCorsair
@@ -172,7 +145,6 @@ AbyssalCorsairSpawn:
   Conditions:
   - mobtype{t=DROWNED}
   - inblock{m=WATER}
-  - maxnearbyentities{a=1;r=64}
 
 SandstalkerSpawn:
   Type: Sandstalker
@@ -182,7 +154,6 @@ SandstalkerSpawn:
   Conditions:
   - mobtype{t=HUSK}
   - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
-  - maxnearbyentities{a=2;r=64}
 
 DunePharaohSpawn:
   Type: DunePharaoh
@@ -192,7 +163,6 @@ DunePharaohSpawn:
   Conditions:
   - mobtype{t=HUSK}
   - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
-  - maxnearbyentities{a=1;r=64}
 
 FrostboundHunterSpawn:
   Type: FrostboundHunter
@@ -202,7 +172,6 @@ FrostboundHunterSpawn:
   Conditions:
   - mobtype{t=STRAY}
   - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}
-  - maxnearbyentities{a=2;r=64}
 
 GlacierRevenantSpawn:
   Type: GlacierRevenant
@@ -212,4 +181,3 @@ GlacierRevenantSpawn:
   Conditions:
   - mobtype{t=STRAY}
   - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}
-  - maxnearbyentities{a=1;r=64}

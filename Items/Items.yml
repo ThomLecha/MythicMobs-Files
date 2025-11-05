@@ -8,14 +8,9 @@ graveWardenCharm:
   Display: '&aAmulette du Gardien'
   Lore:
   - '&7Canalise la vigilance des catacombes.'
-  - '&8Bonus: +2 Points de vie max.'
-  Attributes:
-    GENERIC_MAX_HEALTH:
-      Amount: 2
-      Operation: ADD_NUMBER
-      Slot: HAND
-  Options:
-    Unbreakable: true
+  - '&8Active une protection mineure pendant 45s.'
+  Skills:
+  - skill{s=graveWardenCharmUse} ~onUse
 
 sharpshotQuiver:
   Id: ARROW
@@ -25,14 +20,12 @@ sharpshotQuiver:
   - '&8Bonus: +10% dégâts à l''arc pendant 30s.'
   PotionEffects:
   - INCREASE_DAMAGE 1 600
-  Options:
-    HideFlags: true
 
 venomspinnerFang:
   Id: FERMENTED_SPIDER_EYE
   Display: '&aCroc Venimeux'
   Lore:
-  - '&7Applique Poison I sur les cibles frappées.'
+  - '&7Enduit votre lame d''un poison léger.'
   Enchantments:
   - BANE_OF_ARTHROPODS:2
   Skills:
@@ -43,10 +36,8 @@ chargedSapperPowder:
   Display: '&aPoudre Conductrice'
   Lore:
   - '&7Réduit de 20% les dégâts d''explosion entrants.'
-  Attributes:
-    GENERIC_KNOCKBACK_RESISTANCE:
-      Amount: 0.2
-      Operation: ADD_NUMBER
+  Skills:
+  - skill{s=chargedSapperPowderUse} ~onUse
 
 warpedStalkerPearl:
   Id: ENDER_PEARL
@@ -70,11 +61,11 @@ emberSentinelRod:
   Id: BLAZE_ROD
   Display: '&aBâton Sentinelle'
   Lore:
-  - '&7Projette un cône de braises au contact.'
+  - '&7Libère des braises lors d''un coup au corps-à-corps.'
   Enchantments:
   - FIRE_ASPECT:1
   Skills:
-  - skill{s=emberRodCone} ~onHit
+  - skill{s=emberRodFlare} ~onHit
 
 tideReaverTrident:
   Id: TRIDENT
@@ -83,10 +74,8 @@ tideReaverTrident:
   - '&7Frappe avec la force de la marée.'
   Enchantments:
   - LOYALTY:2
-  Attributes:
-    GENERIC_ATTACK_DAMAGE:
-      Amount: 2
-      Operation: ADD_NUMBER
+  Skills:
+  - skill{s=tideReaverTridentSplash} ~onHit
 
 sandstalkerCharm:
   Id: SAND
@@ -95,20 +84,16 @@ sandstalkerCharm:
   - '&7Immunité temporaire à l''affamement dans le désert.'
   PotionEffects:
   - SATURATION 0 40
-  Options:
-    HideFlags: true
 
 frostboundCloak:
   Id: LEATHER_CHESTPLATE
   Display: '&aCape Gelée'
   Lore:
   - '&7Réduit les dégâts de projectiles de 10%.'
-  Attributes:
-    GENERIC_ARMOR:
-      Amount: 2
-      Operation: ADD_NUMBER
   Options:
     Color: 140,140,255
+  Enchantments:
+  - PROJECTILE_PROTECTION:2
 
 # Tier T2 - récompenses pour les variantes PlusPlus
 cryptSovereignSigil:
@@ -118,10 +103,6 @@ cryptSovereignSigil:
   - '&7Confère un bouclier spectral périodique.'
   Skills:
   - skill{s=cryptSigilWard} ~onUse
-  Attributes:
-    GENERIC_MAX_HEALTH:
-      Amount: 4
-      Operation: ADD_NUMBER
 
 boneWarlordGreatbow:
   Id: BOW
@@ -180,11 +161,11 @@ abyssalCorsairHook:
   Id: FISHING_ROD
   Display: '&bHameçon Abyssal'
   Lore:
-  - '&7Attire votre cible vers vous en combat.'
+  - '&7Déséquilibre votre adversaire lors d''un coup.'
   Enchantments:
   - LUCK_OF_THE_SEA:3
   Skills:
-  - skill{s=abyssalHookPull} ~onHit
+  - skill{s=abyssalHookJolt} ~onHit
 
 dunePharaohCirclet:
   Id: GOLDEN_HELMET
@@ -192,11 +173,9 @@ dunePharaohCirclet:
   Lore:
   - '&7Projette un mur de sable protecteur.'
   Skills:
-  - skill{s=duneCircletWall} ~onDamaged
-  Attributes:
-    GENERIC_ARMOR:
-      Amount: 3
-      Operation: ADD_NUMBER
+  - skill{s=duneCircletWard} ~onDamaged
+  Enchantments:
+  - PROTECTION:3
 
 glacierRevenantShard:
   Id: BLUE_ICE
@@ -205,5 +184,3 @@ glacierRevenantShard:
   - '&7Gèle les ennemis proches lorsque vous tombez sous 4 c&oelig;urs.'
   Skills:
   - skill{s=glacierShardFreeze} ~onDamaged
-  Options:
-    HideFlags: true

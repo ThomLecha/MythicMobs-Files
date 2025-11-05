@@ -67,12 +67,9 @@ boneWarlordImpact:
 venomspinnerSpray:
   Cooldown: 8
   Skills:
-  - cone{angle=70;maxDistance=6;skill=venomspinnerSprayHit} @PlayersInRadius{r=6}
-
-venomspinnerSprayHit:
-  Skills:
-  - damage{a=5} @Target
-  - potion{type=POISON;duration=80;level=0} @Target
+  - effect:particles{p=spit;amount=25;speed=0.2} @self
+  - damage{a=5} @PlayersInRadius{r=4}
+  - potion{type=POISON;duration=80;level=0} @PlayersInRadius{r=4}
 
 nightWidowDash:
   Cooldown: 12
@@ -86,9 +83,8 @@ nightWidowSilkField:
   Cooldown: 18
   Skills:
   - effect:particles{p=spit;amount=30;speed=0.1} @self
-  - setblock{m=COBWEB;r=2;d=6} @self
-  - delay 10
-  - removeblock{m=COBWEB;r=2} @self
+  - potion{type=SLOW;duration=100;level=1} @PlayersInRadius{r=4}
+  - potion{type=WEAKNESS;duration=80;level=0} @PlayersInRadius{r=4}
 
 # --- Compétences des creepers d'élite ---
 chargedSapperIgnite:
@@ -103,7 +99,8 @@ stormDetonatorPulse:
   Cooldown: 22
   Skills:
   - effect:particles{p=cloud;amount=40;speed=0.3} @self
-  - thunderstorm{length=20} @SelfLocation
+  - sound{s=entity.creeper.primed;v=1.2;p=0.6} @self
+  - lightning @SelfLocation
   - damage{a=10;ia=true} @PlayersInRadius{r=5}
   - potion{type=WEAKNESS;duration=60;level=1} @PlayersInRadius{r=5}
 
@@ -127,15 +124,22 @@ voidshadeGravityWell:
   Cooldown: 20
   Skills:
   - effect:particles{p=dragon_breath;amount=50;speed=0.05} @self
-  - pull{v=1.1} @PlayersInRadius{r=6}
+  - potion{type=SLOW;duration=100;level=1} @PlayersInRadius{r=6}
+  - delay 5
   - damage{a=10} @PlayersInRadius{r=6}
 
 # --- Compétences des sorcières d'élite ---
 brewMistressSplash:
   Cooldown: 10
   Skills:
-  - throwpotion{type=STRONG_HARMING} @NearestPlayer{r=15}
+  - projectile{onHit=brewMistressImpact;type=SNOWBALL;v=16;i=1;hR=1;vR=1} @NearestPlayer{r=15}
   - potion{type=REGENERATION;duration=80;level=0} @self
+
+brewMistressImpact:
+  Skills:
+  - effect:particles{p=spell;amount=20;speed=0.2} @Target
+  - damage{a=6} @Target
+  - potion{type=POISON;duration=80;level=0} @Target
 
 hexMatriarchRitual:
   Cooldown: 18
@@ -148,7 +152,7 @@ hexMatriarchRitual:
 emberSentinelBurst:
   Cooldown: 8
   Skills:
-  - projectile{onTick=emberSentinelTrail;onHit=emberSentinelImpact;v=16;i=3} @NearestPlayer{r=20}
+  - projectile{onTick=emberSentinelTrail;onHit=emberSentinelImpact;type=SMALL_FIREBALL;v=16;i=3} @NearestPlayer{r=20}
 
 emberSentinelTrail:
   Skills:
@@ -162,15 +166,21 @@ emberSentinelImpact:
 infernoArchonMeteor:
   Cooldown: 20
   Skills:
-  - summonmeteor{radius=3;damage=11;fireTicks=120} @NearestPlayer{r=18}
+  - projectile{onHit=infernoArchonImpact;type=FIREBALL;v=20;i=1} @NearestPlayer{r=20}
   - potion{type=FIRE_RESISTANCE;duration=100;level=0} @self
+
+infernoArchonImpact:
+  Skills:
+  - effect:particles{p=explosion;amount=30;speed=0.5} @Target
+  - damage{a=11;ia=true} @PlayersInRadius{r=3}
+  - ignite{ticks=120} @PlayersInRadius{r=3}
 
 # --- Compétences des noyés d'élite ---
 tideReaverWhirlpool:
   Cooldown: 12
   Skills:
   - effect:particles{p=bubble;amount=35;speed=0.3} @self
-  - push{v=-1.1} @PlayersInRadius{r=5}
+  - potion{type=SLOW;duration=80;level=1} @PlayersInRadius{r=5}
   - damage{a=6} @PlayersInRadius{r=5}
 
 abyssalCorsairBoarding:
@@ -201,7 +211,7 @@ dunePharaohQuake:
   Skills:
   - effect:particles{p=blockdust;m=sandstone;amount=60;speed=0.3} @self
   - damage{a=9} @PlayersInRadius{r=5}
-  - stun{d=40} @PlayersInRadius{r=5}
+  - potion{type=SLOW;duration=80;level=1} @PlayersInRadius{r=5}
 
 # --- Compétences des strays d'élite ---
 frostboundVolley:
@@ -230,19 +240,21 @@ glacierRevenantStorm:
 # --- Compétences déclenchées par les objets ---
 venomspinnerFangProc:
   Skills:
-  - potion{type=POISON;duration=60;level=0} @Victim
+  - projectile{onHit=venomspinnerFangImpact;v=18;i=1;hR=1;vR=1} @self
+
+venomspinnerFangImpact:
+  Skills:
+  - damage{a=3} @Target
+  - potion{type=POISON;duration=60;level=0} @Target
 
 warpedPearlStabilize:
   Skills:
   - damage{a=1;causesuicide=false} @self
   - potion{type=ABSORPTION;duration=120;level=0} @self
 
-emberRodCone:
+emberRodFlare:
   Skills:
-  - cone{angle=70;maxDistance=5;skill=emberRodConeHit} @PlayersInRadius{r=5}
-
-emberRodConeHit:
-  Skills:
+  - effect:particles{p=flame;amount=20;speed=0.2} @Target
   - damage{a=5} @Target
   - ignite{ticks=60} @Target
 
@@ -256,8 +268,9 @@ nightVeilFade:
 
 stormCoreRetaliation:
   Skills:
-  - lightning @Damager
-  - damage{a=8} @Damager
+  - effect:particles{p=cloud;amount=20;speed=0.2} @self
+  - lightning @SelfLocation
+  - damage{a=8;ia=true} @PlayersInRadius{r=4}
 
 voidRelicBlink:
   Skills:
@@ -275,17 +288,38 @@ infernoHeartNova:
   - damage{a=8;ia=true} @PlayersInRadius{r=5}
   - ignite{ticks=100} @PlayersInRadius{r=5}
 
-abyssalHookPull:
+abyssalHookJolt:
   Skills:
-  - pull{v=1.3} @Victim
+  - effect:particles{p=crit;amount=10;speed=0.2} @Target
+  - damage{a=4} @Target
+  - potion{type=SLOW;duration=60;level=1} @Target
 
-duneCircletWall:
+duneCircletWard:
   Skills:
   - effect:particles{p=blockdust;m=sand;amount=40;speed=0.3} @self
   - shield{a=8;d=80} @self
+  - potion{type=ABSORPTION;duration=100;level=1} @self
 
 glacierShardFreeze:
   Skills:
   - effect:particles{p=snowflake;amount=30;speed=0.1} @self
   - potion{type=SLOW;duration=100;level=1} @PlayersInRadius{r=4}
+
+graveWardenCharmUse:
+  Skills:
+  - effect:particles{p=totem_of_undying;amount=25;speed=0.2} @self
+  - potion{type=ABSORPTION;duration=900;level=0} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=0} @self
+
+chargedSapperPowderUse:
+  Skills:
+  - effect:particles{p=reddust;color=0,180,255;amount=20;speed=0.2} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=0} @self
+  - potion{type=FIRE_RESISTANCE;duration=120;level=0} @self
+
+tideReaverTridentSplash:
+  Skills:
+  - effect:particles{p=splash;amount=20;speed=0.2} @Target
+  - damage{a=4} @Target
+  - potion{type=SLOW;duration=60;level=1} @Target
 
