@@ -5,7 +5,7 @@
 GraveWardenSpawn:
   Type: GraveWarden
   Worlds: world
-  Chance: 0.07
+  Chance: 0.065
   Action: REPLACE
   Conditions:
   - mobtype{t=ZOMBIE}
@@ -23,7 +23,7 @@ CryptSovereignSpawn:
 SharpshotSkeletonSpawn:
   Type: SharpshotSkeleton
   Worlds: world
-  Chance: 0.06
+  Chance: 0.05
   Action: REPLACE
   Conditions:
   - mobtype{t=SKELETON}
@@ -32,7 +32,7 @@ SharpshotSkeletonSpawn:
 BoneWarlordSpawn:
   Type: BoneWarlord
   Worlds: world
-  Chance: 0.01
+  Chance: 0.008
   Action: REPLACE
   Conditions:
   - mobtype{t=SKELETON}
@@ -41,7 +41,7 @@ BoneWarlordSpawn:
 VenomspinnerSpawn:
   Type: Venomspinner
   Worlds: world
-  Chance: 0.08
+  Chance: 0.075
   Action: REPLACE
   Conditions:
   - mobtype{t=SPIDER}
@@ -59,7 +59,7 @@ NightWidowSpawn:
 ChargedSapperSpawn:
   Type: ChargedSapper
   Worlds: world
-  Chance: 0.05
+  Chance: 0.04
   Action: REPLACE
   Conditions:
   - mobtype{t=CREEPER}
@@ -68,7 +68,7 @@ ChargedSapperSpawn:
 StormDetonatorSpawn:
   Type: StormDetonator
   Worlds: world
-  Chance: 0.009
+  Chance: 0.007
   Action: REPLACE
   Conditions:
   - mobtype{t=CREEPER}
@@ -77,7 +77,7 @@ StormDetonatorSpawn:
 WarpedStalkerSpawn:
   Type: WarpedStalker
   Worlds: world,world_the_end
-  Chance: 0.06
+  Chance: 0.055
   Action: REPLACE
   Conditions:
   - mobtype{t=ENDERMAN}
@@ -86,34 +86,34 @@ WarpedStalkerSpawn:
 VoidshadeTitanSpawn:
   Type: VoidshadeTitan
   Worlds: world,world_the_end
-  Chance: 0.01
+  Chance: 0.009
   Action: REPLACE
   Conditions:
   - mobtype{t=ENDERMAN}
   - outside true
 
-BrewMistressSpawn:
-  Type: BrewMistress
+VolleySkirmisherSpawn:
+  Type: VolleySkirmisher
   Worlds: world
-  Chance: 0.065
+  Chance: 0.045
   Action: REPLACE
   Conditions:
-  - mobtype{t=WITCH}
+  - mobtype{t=PILLAGER}
   - outside true
 
-HexMatriarchSpawn:
-  Type: HexMatriarch
+WarbandCaptainSpawn:
+  Type: WarbandCaptain
   Worlds: world
-  Chance: 0.012
+  Chance: 0.0075
   Action: REPLACE
   Conditions:
-  - mobtype{t=WITCH}
+  - mobtype{t=PILLAGER}
   - outside true
 
 EmberSentinelSpawn:
   Type: EmberSentinel
   Worlds: world_nether
-  Chance: 0.075
+  Chance: 0.068
   Action: REPLACE
   Conditions:
   - mobtype{t=BLAZE}
@@ -122,34 +122,34 @@ EmberSentinelSpawn:
 InfernoArchonSpawn:
   Type: InfernoArchon
   Worlds: world_nether
-  Chance: 0.012
+  Chance: 0.011
   Action: REPLACE
   Conditions:
   - mobtype{t=BLAZE}
   - outside false
 
-TideReaverSpawn:
-  Type: TideReaver
-  Worlds: world
-  Chance: 0.07
+AshenBruiserSpawn:
+  Type: AshenBruiser
+  Worlds: world_nether
+  Chance: 0.035
   Action: REPLACE
   Conditions:
-  - mobtype{t=DROWNED}
-  - inblock{m=WATER}
+  - mobtype{t=PIGLIN}
+  - outside false
 
-AbyssalCorsairSpawn:
-  Type: AbyssalCorsair
-  Worlds: world
-  Chance: 0.012
+GildedWarmongerSpawn:
+  Type: GildedWarmonger
+  Worlds: world_nether
+  Chance: 0.006
   Action: REPLACE
   Conditions:
-  - mobtype{t=DROWNED}
-  - inblock{m=WATER}
+  - mobtype{t=PIGLIN}
+  - outside false
 
 SandstalkerSpawn:
   Type: Sandstalker
   Worlds: world
-  Chance: 0.065
+  Chance: 0.052
   Action: REPLACE
   Conditions:
   - mobtype{t=HUSK}
@@ -158,7 +158,7 @@ SandstalkerSpawn:
 DunePharaohSpawn:
   Type: DunePharaoh
   Worlds: world
-  Chance: 0.01
+  Chance: 0.0095
   Action: REPLACE
   Conditions:
   - mobtype{t=HUSK}
@@ -167,7 +167,7 @@ DunePharaohSpawn:
 FrostboundHunterSpawn:
   Type: FrostboundHunter
   Worlds: world
-  Chance: 0.06
+  Chance: 0.048
   Action: REPLACE
   Conditions:
   - mobtype{t=STRAY}
@@ -176,7 +176,7 @@ FrostboundHunterSpawn:
 GlacierRevenantSpawn:
   Type: GlacierRevenant
   Worlds: world
-  Chance: 0.012
+  Chance: 0.0085
   Action: REPLACE
   Conditions:
   - mobtype{t=STRAY}

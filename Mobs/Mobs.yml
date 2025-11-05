@@ -190,33 +190,41 @@ VoidshadeTitan: # Variante PlusPlus
     MovementSpeed: 0.34
     PreventRandomEquipment: true
 
-# -- Variantes de Witch --
-BrewMistress: # Variante Plus
-  Type: WITCH
-  Display: '&2Maîtresse des Breuvages'
-  Health: 52
-  Damage: 5
+# -- Variantes de Pillager --
+VolleySkirmisher: # Variante Plus
+  Type: PILLAGER
+  Display: '&2Voltigeur de Foudre'
+  Health: 48
+  Damage: 7
   Armor: 4
   Skills:
-  - skill{s=brewMistressSplash} @target ~onTimer:90
+  - skill{s=skirmisherVolley} @target ~onAttack
   Drops:
-  - brewMistressSatchel 0.08
+  - skirmisherBandolier 0.08
+  Equipment:
+  - CROSSBOW HAND
   Options:
-    FollowRange: 28
+    MovementSpeed: 0.29
+    FollowRange: 30
     PreventRandomEquipment: true
 
-HexMatriarch: # Variante PlusPlus
-  Type: WITCH
-  Display: '&5Matriarche des Hexes'
-  Health: 90
-  Damage: 7
-  Armor: 7
+WarbandCaptain: # Variante PlusPlus
+  Type: PILLAGER
+  Display: '&5Capitaine de Guerre'
+  Health: 88
+  Damage: 9
+  Armor: 8
   Skills:
-  - skill{s=hexMatriarchRitual} @self ~onTimer:140
+  - skill{s=warbandCaptainVolley} @target ~onAttack
+  - skill{s=warbandCaptainRally} @self ~onTimer:150
   Drops:
-  - hexMatriarchGrimoire 0.05
-  - brewMistressSatchel 0.1
+  - warbandCommandPavise 0.05
+  - skirmisherBandolier 0.12
+  Equipment:
+  - CROSSBOW HAND
+  - IRON_HELMET HEAD
   Options:
+    MovementSpeed: 0.3
     FollowRange: 32
     PreventRandomEquipment: true
 
@@ -249,39 +257,40 @@ InfernoArchon: # Variante PlusPlus
   Options:
     FollowRange: 34
 
-# -- Variantes de Drowned --
-TideReaver: # Variante Plus
-  Type: DROWNED
-  Display: '&3Racleur de Marée'
-  Health: 48
-  Damage: 7
-  Armor: 5
+# -- Variantes de Piglin --
+AshenBruiser: # Variante Plus
+  Type: PIGLIN
+  Display: '&6Brute Cendreuse'
+  Health: 56
+  Damage: 8
+  Armor: 6
   Skills:
-  - skill{s=tideReaverWhirlpool} @self ~onTimer:120
+  - skill{s=ashenBruiserCharge} @target ~onAttack
   Drops:
-  - tideReaverTrident 0.08
+  - ashenWarbrand 0.08
   Equipment:
-  - TRIDENT HAND
+  - GOLDEN_SWORD HAND
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.31
     PreventRandomEquipment: true
 
-AbyssalCorsair: # Variante PlusPlus
-  Type: DROWNED
-  Display: '&1Corsaire Abyssal'
-  Health: 85
-  Damage: 9
-  Armor: 9
+GildedWarmonger: # Variante PlusPlus
+  Type: PIGLIN
+  Display: '&eBelluaire Doré'
+  Health: 105
+  Damage: 11
+  Armor: 10
   Skills:
-  - skill{s=abyssalCorsairBoarding} @target ~onAttack
-  - skill{s=tideReaverWhirlpool} @self ~onDamaged
+  - skill{s=gildedWarmongerRoar} @self ~onTimer:150
+  - skill{s=gildedWarmongerShockwave} @self ~onDamaged
   Drops:
-  - abyssalCorsairHook 0.05
-  - tideReaverTrident 0.12
+  - gildedWarhorn 0.05
+  - ashenWarbrand 0.12
   Equipment:
-  - TRIDENT HAND
+  - GOLDEN_AXE HAND
+  - GOLDEN_HELMET HEAD
   Options:
-    MovementSpeed: 0.32
+    MovementSpeed: 0.33
     PreventRandomEquipment: true
 
 # -- Variantes de Husk --
@@ -293,6 +302,7 @@ Sandstalker: # Variante Plus
   Armor: 4
   Skills:
   - skill{s=sandstalkerAmbush} @target ~onAttack
+  - skill{s=sandstalkerDustCloud} @self ~onDamaged
   Drops:
   - sandstalkerCharm 0.08
   Options:
@@ -307,6 +317,7 @@ DunePharaoh: # Variante PlusPlus
   Armor: 9
   Skills:
   - skill{s=dunePharaohQuake} @self ~onTimer:160
+  - skill{s=sandstalkerDustCloud} @self ~onDamaged
   Drops:
   - dunePharaohCirclet 0.05
   - sandstalkerCharm 0.12

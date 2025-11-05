@@ -1,5 +1,5 @@
 # Comment utiliser: Ajoutez ce fichier dans le dossier Items de MythicMobs et rechargez avec /mm reload pour activer ces loot tables thématiques.
-# Équilibrage: Les objets T1 sont conçus pour offrir un petit bonus de survie, tandis que les objets T2 procurent un avantage notable mais situational.
+# Équilibrage: Les objets T1 sont conçus pour offrir un petit bonus de survie, tandis que les objets T2 procurent un avantage notable mais situationnel.
 # Conseils: Ajustez les chances de drop dans Mobs.yml selon la progression de votre serveur et combinez avec des quêtes ou succès personnalisés.
 
 # Tier T1 - récompenses pour les variantes Plus
@@ -43,19 +43,19 @@ warpedStalkerPearl:
   Id: ENDER_PEARL
   Display: '&aPerle Distordue'
   Lore:
-  - '&7Téléportation plus stable, -1 c&oû?t en vie.'
+  - '&7Téléportation plus stable, -1 c&oelig;ur de coût en vie.'
   Skills:
   - skill{s=warpedPearlStabilize} ~onUse
 
-brewMistressSatchel:
-  Id: POTION
-  Display: '&aSacoche de Potions'
-  Options:
-    Color: 125,0,125
+skirmisherBandolier:
+  Id: CROSSBOW
+  Display: '&aBandelier du Voltigeur'
   Lore:
-  - '&7Contient des essences curatives mineures.'
-  PotionEffects:
-  - REGENERATION 0 160
+  - '&7Améliore la cadence des arbalètes pendant 45s.'
+  Enchantments:
+  - QUICK_CHARGE:2
+  Skills:
+  - skill{s=skirmisherBandolierUse} ~onUse
 
 emberSentinelRod:
   Id: BLAZE_ROD
@@ -67,21 +67,21 @@ emberSentinelRod:
   Skills:
   - skill{s=emberRodFlare} ~onHit
 
-tideReaverTrident:
-  Id: TRIDENT
-  Display: '&aTrident du Racleur'
+ashenWarbrand:
+  Id: GOLDEN_SWORD
+  Display: '&aLame Cendreuse'
   Lore:
-  - '&7Frappe avec la force de la marée.'
+  - '&7Les coups infligent des brûlures légères.'
   Enchantments:
-  - LOYALTY:2
+  - SHARPNESS:3
   Skills:
-  - skill{s=tideReaverTridentSplash} ~onHit
+  - skill{s=ashenWarbrandIgnite} ~onHit
 
 sandstalkerCharm:
   Id: SAND
   Display: '&aCharme du Traque-Sable'
   Lore:
-  - '&7Immunité temporaire à l''affamement dans le désert.'
+  - '&7Immunité temporaire à la faim dans le désert.'
   PotionEffects:
   - SATURATION 0 40
 
@@ -139,15 +139,15 @@ voidshadeRelic:
   Skills:
   - skill{s=voidRelicBlink} ~onUse
 
-hexMatriarchGrimoire:
-  Id: ENCHANTED_BOOK
-  Display: '&bGrimoire de la Matriarche'
+warbandCommandPavise:
+  Id: SHIELD
+  Display: '&bPavois de Commandement'
   Lore:
-  - '&7Lance un sort d''affliction renforcé.'
+  - '&7Déploie une défense renforcée pour l''escouade.'
   Enchantments:
-  - VANISHING_CURSE:1
+  - UNBREAKING:3
   Skills:
-  - skill{s=hexMatriarchBurst} ~onUse
+  - skill{s=warbandPaviseFortify} ~onUse
 
 infernoArchonHeart:
   Id: NETHER_STAR
@@ -157,15 +157,13 @@ infernoArchonHeart:
   Skills:
   - skill{s=infernoHeartNova} ~onCritical
 
-abyssalCorsairHook:
-  Id: FISHING_ROD
-  Display: '&bHameçon Abyssal'
+gildedWarhorn:
+  Id: GOAT_HORN
+  Display: '&bCor de Guerre Doré'
   Lore:
-  - '&7Déséquilibre votre adversaire lors d''un coup.'
-  Enchantments:
-  - LUCK_OF_THE_SEA:3
+  - '&7Inspire une rage dorée aux alliés proches.'
   Skills:
-  - skill{s=abyssalHookJolt} ~onHit
+  - skill{s=gildedWarhornCall} ~onUse
 
 dunePharaohCirclet:
   Id: GOLDEN_HELMET

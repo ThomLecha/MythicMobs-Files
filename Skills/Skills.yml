@@ -128,25 +128,39 @@ voidshadeGravityWell:
   - delay 5
   - damage{a=10} @PlayersInRadius{r=6}
 
-# --- Compétences des sorcières d'élite ---
-brewMistressSplash:
-  Cooldown: 10
+# --- Compétences des pillagers d'élite ---
+skirmisherVolley:
+  Cooldown: 8
   Skills:
-  - projectile{onHit=brewMistressImpact;type=SNOWBALL;v=16;i=1;hR=1;vR=1} @NearestPlayer{r=15}
-  - potion{type=REGENERATION;duration=80;level=0} @self
+  - projectile{onTick=skirmisherTrail;onHit=skirmisherImpact;type=ARROW;v=19;i=2;hR=1;vR=1} @NearestPlayer{r=22}
 
-brewMistressImpact:
+skirmisherTrail:
   Skills:
-  - effect:particles{p=spell;amount=20;speed=0.2} @Target
+  - effect:particles{p=crit;amount=4;speed=0.02} @Origin
+
+skirmisherImpact:
+  Skills:
   - damage{a=6} @Target
-  - potion{type=POISON;duration=80;level=0} @Target
+  - potion{type=SLOW;duration=60;level=0} @Target
 
-hexMatriarchRitual:
+warbandCaptainVolley:
+  Cooldown: 12
+  Skills:
+  - projectile{onTick=warbandCaptainTrail;onHit=skirmisherImpact;type=ARROW;v=20;i=3;hR=1;vR=1} @PlayersInRadius{r=24}
+
+warbandCaptainTrail:
+  Skills:
+  - effect:particles{p=enchanted_hit;amount=6;speed=0.03} @Origin
+
+warbandCaptainRally:
   Cooldown: 18
   Skills:
-  - effect:particles{p=witch;amount=40;speed=0.3} @self
-  - potion{type=LEVITATION;duration=40;level=0} @PlayersInRadius{r=5}
-  - damage{a=9} @PlayersInRadius{r=5}
+  - effect:particles{p=totem_of_undying;amount=30;speed=0.3} @self
+  - sound{s=entity.pillager.celebrate;v=1;p=1} @self
+  - potion{type=INCREASE_DAMAGE;duration=140;level=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=0} @self
+  - potion{type=INCREASE_DAMAGE;duration=100;level=0} @MobsInRadius{r=8;t=PILLAGER}
+  - potion{type=SPEED;duration=100;level=0} @MobsInRadius{r=8;t=PILLAGER}
 
 # --- Compétences des blazes d'élite ---
 emberSentinelBurst:
@@ -175,21 +189,32 @@ infernoArchonImpact:
   - damage{a=11;ia=true} @PlayersInRadius{r=3}
   - ignite{ticks=120} @PlayersInRadius{r=3}
 
-# --- Compétences des noyés d'élite ---
-tideReaverWhirlpool:
+# --- Compétences des piglins d'élite ---
+ashenBruiserCharge:
   Cooldown: 12
   Skills:
-  - effect:particles{p=bubble;amount=35;speed=0.3} @self
-  - potion{type=SLOW;duration=80;level=1} @PlayersInRadius{r=5}
-  - damage{a=6} @PlayersInRadius{r=5}
+  - effect:particles{p=smoke;amount=20;speed=0.2} @self
+  - leap{velocity=1.25} @self
+  - delay 3
+  - damage{a=8} @NearestPlayer{r=3}
+  - potion{type=WEAKNESS;duration=60;level=0} @NearestPlayer{r=3}
 
-abyssalCorsairBoarding:
+gildedWarmongerRoar:
   Cooldown: 18
   Skills:
-  - leap{velocity=1.4} @self
-  - delay 4
-  - damage{a=9} @NearestPlayer{r=3}
-  - potion{type=SLOW;duration=80;level=1} @NearestPlayer{r=3}
+  - sound{s=entity.piglin_brute.angry;v=1.3;p=0.8} @self
+  - effect:particles{p=flame;amount=25;speed=0.3} @self
+  - potion{type=INCREASE_DAMAGE;duration=140;level=1} @self
+  - potion{type=FIRE_RESISTANCE;duration=160;level=0} @self
+  - potion{type=INCREASE_DAMAGE;duration=100;level=0} @MobsInRadius{r=8;t=PIGLIN}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=0} @MobsInRadius{r=8;t=PIGLIN}
+
+gildedWarmongerShockwave:
+  Cooldown: 16
+  Skills:
+  - effect:particles{p=explosion;amount=20;speed=0.4} @self
+  - damage{a=10} @PlayersInRadius{r=4}
+  - ignite{ticks=100} @PlayersInRadius{r=4}
 
 # --- Compétences des husks d'élite ---
 sandstalkerAmbush:
@@ -279,10 +304,12 @@ voidRelicBlink:
   - teleport{spread=6} @self
   - potion{type=INVISIBILITY;duration=40;level=0} @self
 
-hexMatriarchBurst:
+warbandPaviseFortify:
   Skills:
-  - effect:particles{p=witch;amount=40;speed=0.2} @self
-  - potion{type=WEAKNESS;duration=120;level=1} @PlayersInRadius{r=5}
+  - effect:particles{p=totem_of_undying;amount=25;speed=0.3} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=160;level=1} @self
+  - potion{type=ABSORPTION;duration=160;level=0} @self
+  - potion{type=FIRE_RESISTANCE;duration=160;level=0} @PlayersInRadius{r=4}
 
 infernoHeartNova:
   Skills:
@@ -290,11 +317,13 @@ infernoHeartNova:
   - damage{a=8;ia=true} @PlayersInRadius{r=5}
   - ignite{ticks=100} @PlayersInRadius{r=5}
 
-abyssalHookJolt:
+gildedWarhornCall:
   Skills:
-  - effect:particles{p=crit;amount=10;speed=0.2} @Target
-  - damage{a=4} @Target
-  - potion{type=SLOW;duration=60;level=1} @Target
+  - sound{s=entity.piglin_brute.celebrate;v=1.2;p=1} @self
+  - potion{type=INCREASE_DAMAGE;duration=160;level=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=160;level=0} @self
+  - potion{type=INCREASE_DAMAGE;duration=120;level=0} @PlayersInRadius{r=6}
+  - potion{type=SPEED;duration=120;level=0} @PlayersInRadius{r=6}
 
 duneCircletWard:
   Skills:
@@ -319,9 +348,14 @@ chargedSapperPowderUse:
   - potion{type=DAMAGE_RESISTANCE;duration=200;level=0} @self
   - potion{type=FIRE_RESISTANCE;duration=120;level=0} @self
 
-tideReaverTridentSplash:
+skirmisherBandolierUse:
   Skills:
-  - effect:particles{p=splash;amount=20;speed=0.2} @Target
-  - damage{a=4} @Target
-  - potion{type=SLOW;duration=60;level=1} @Target
+  - effect:particles{p=crit;amount=15;speed=0.2} @self
+  - potion{type=FAST_DIGGING;duration=200;level=1} @self
+  - potion{type=SPEED;duration=160;level=0} @self
 
+ashenWarbrandIgnite:
+  Skills:
+  - effect:particles{p=flame;amount=10;speed=0.3} @Target
+  - damage{a=4} @Target
+  - ignite{ticks=80} @Target
