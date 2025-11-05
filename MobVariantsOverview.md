@@ -1,14 +1,24 @@
-# Aperçu des variantes MythicMobs
+# Aperçu détaillé des variantes MythicMobs
 
-| Mob Vanilla | Variante Plus | Chance Plus | PV Plus | Variante PlusPlus | Chance PlusPlus | PV PlusPlus | Loot T1 | Loot T2 | Biome/Dimension |
-|-------------|---------------|-------------|---------|-------------------|-----------------|-------------|---------|---------|-----------------|
-| Zombie | Gardien des Tombes | 7% | 60 | Souverain des Cryptes | 1.2% | 110 | Amulette du Gardien | Sceau du Souverain | Overworld nuit |
-| Skeleton | Tireur Affûté | 6% | 40 | Seigneur des Os | 1% | 80 | Carquois Affûté | Grand Arc du Warlord | Overworld nuit |
-| Spider | Tisseuse Venimeuse | 8% | 36 | Veuve Nocturne | 1.5% | 70 | Croc Venimeux | Voile de la Veuve | Overworld nuit |
-| Creeper | Sappeur Chargé | 5% | 30 | Détonateur de Tempête | 0.9% | 55 | Poudre Conductrice | Cœur de Tempête | Overworld nuit |
-| Enderman | Traqueur Distordu | 6% | 70 | Titan Ombreuse | 1% | 120 | Perle Distordue | Relique Ombreuse | Overworld & End |
-| Witch | Maîtresse des Breuvages | 6.5% | 52 | Matriarche des Hexes | 1.2% | 90 | Sacoche de Potions | Grimoire de la Matriarche | Overworld nuit |
-| Blaze | Sentinelle de Braise | 7.5% | 52 | Archon Infernal | 1.2% | 90 | Bâton Sentinelle | Cœur d'Archon | Nether |
-| Drowned | Racleur de Marée | 7% | 48 | Corsaire Abyssal | 1.2% | 85 | Trident du Racleur | Hameçon Abyssal | Zones aquatiques |
-| Husk | Traqueur des Sables | 6.5% | 50 | Pharaon des Dunes | 1% | 92 | Charme du Traque-Sable | Diadème du Pharaon | Déserts |
-| Stray | Chasseur Ligoté | 6% | 44 | Revenant Glaciaire | 1.2% | 88 | Cape Gelée | Éclat de Glacier | Biomes neige |
+| Variante | Type Vanilla remplacé | Apparence / Rôle | PV | Dégâts estimés | Chance de remplacement | Principal loot | Notes terrain |
+|----------|-----------------------|------------------|----|----------------|------------------------|----------------|---------------|
+| Gardien des Tombes | Zombie | Zombie cuirassé gardant les tombes | 60 | ~7 DPS | 7% | Amulette du Gardien (T1) | Extérieur overworld |
+| Souverain des Cryptes | Zombie | Seigneur spectral entouré de sbires | 110 | ~9 DPS | 1.2% | Sceau du Souverain (T2) | Extérieur overworld |
+| Tireur Affûté | Skeleton | Archer bleu aux flèches précises | 40 | ~6 DPS | 6% | Carquois Affûté (T1) | Extérieur overworld |
+| Seigneur des Os | Skeleton | Général squelette, tir rapide | 80 | ~7 DPS | 1% | Grand Arc du Warlord (T2) | Extérieur overworld |
+| Tisseuse Venimeuse | Spider | Araignée verdâtre acide | 36 | ~6 DPS | 8% | Croc Venimeux (T1) | Extérieur overworld |
+| Veuve Nocturne | Spider | Araignée sombre agile | 70 | ~8 DPS | 1.5% | Voile de la Veuve (T2) | Extérieur overworld |
+| Sappeur Chargé | Creeper | Creeper cyan chargé d'énergie | 30 | Explosion 6 | 5% | Poudre Conductrice (T1) | Extérieur overworld |
+| Détonateur de Tempête | Creeper | Creeper orageux à impacts de foudre | 55 | Explosion 8 | 0.9% | Cœur de Tempête (T2) | Extérieur overworld |
+| Traqueur Distordu | Enderman | Enderman violet se téléportant | 70 | ~9 DPS | 6% | Perle Distordue (T1) | Overworld & End |
+| Titan Ombreuse | Enderman | Géant ombreux contrôlant la gravité | 120 | ~12 DPS | 1% | Relique Ombreuse (T2) | Overworld & End |
+| Maîtresse des Breuvages | Witch | Sorcière bardée de fioles | 52 | ~5 DPS | 6.5% | Sacoche de Potions (T1) | Extérieur overworld |
+| Matriarche des Hexes | Witch | Sorcière violette flottante | 90 | ~7 DPS | 1.2% | Grimoire de la Matriarche (T2) | Extérieur overworld |
+| Sentinelle de Braise | Blaze | Blaze doré aux projectiles rapides | 52 | ~7 DPS | 7.5% | Bâton Sentinelle (T1) | Nether |
+| Archon Infernal | Blaze | Blaze écarlate avec fireballs | 90 | ~10 DPS | 1.2% | Cœur d'Archon (T2) | Nether |
+| Racleur de Marée | Drowned | Noyé armé d'un trident rouillé | 48 | ~7 DPS | 7% | Trident du Racleur (T1) | Zones aquatiques |
+| Corsaire Abyssal | Drowned | Pirate noyé en armure | 85 | ~9 DPS | 1.2% | Hameçon Abyssal (T2) | Zones aquatiques |
+| Traqueur des Sables | Husk | Mort-vivant sableux rapide | 50 | ~7 DPS | 6.5% | Charme du Traque-Sable (T1) | Biomes désertiques |
+| Pharaon des Dunes | Husk | Roi momifié avec secousses | 92 | ~10 DPS | 1% | Diadème du Pharaon (T2) | Biomes désertiques |
+| Chasseur Ligoté | Stray | Archer glacé camouflé | 44 | ~6 DPS | 6% | Cape Gelée (T1) | Biomes enneigés |
+| Revenant Glaciaire | Stray | Spectre glacé contrôlant le gel | 88 | ~8 DPS | 1.2% | Éclat de Glacier (T2) | Biomes enneigés |

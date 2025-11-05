@@ -51,7 +51,7 @@ sharpshotImpact:
 boneWarlordRain:
   Cooldown: 16
   Skills:
-  - missile{ot=boneWarlordTrail;oh=boneWarlordImpact;v=20;i=6;hp=true;hn=true;mr=0.5;vr=0.5} @PlayersInRadius{r=20}
+  - projectile{onTick=boneWarlordTrail;onHit=boneWarlordImpact;type=ARROW;v=20;i=1;hR=1;vR=1} @PlayersInRadius{r=20}
 
 boneWarlordTrail:
   Skills:
@@ -260,7 +260,9 @@ emberRodFlare:
 
 cryptSigilWard:
   Skills:
-  - shield{a=6;d=100} @self
+  - effect:particles{p=soul_fire_flame;amount=20;speed=0.2} @self
+  - potion{type=ABSORPTION;duration=160;level=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=160;level=0} @self
 
 nightVeilFade:
   Skills:
@@ -297,8 +299,8 @@ abyssalHookJolt:
 duneCircletWard:
   Skills:
   - effect:particles{p=blockdust;m=sand;amount=40;speed=0.3} @self
-  - shield{a=8;d=80} @self
-  - potion{type=ABSORPTION;duration=100;level=1} @self
+  - potion{type=ABSORPTION;duration=200;level=1} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=120;level=1} @self
 
 glacierShardFreeze:
   Skills:
