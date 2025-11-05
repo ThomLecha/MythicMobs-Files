@@ -1,0 +1,183 @@
+# Comment utiliser: Placez ce fichier dans RandomSpawns/ puis rechargez MythicMobs pour activer les remplacements naturels.
+# Équilibrage: Les chances sont calibrées pour offrir des rencontres rares mais marquantes; ajustez selon la densité de joueurs.
+# Conseils: Combinez ces spawns avec des conditions régionales ou de temps pour moduler la difficulté par biome.
+
+GraveWardenSpawn:
+  Type: GraveWarden
+  Worlds: world
+  Chance: 0.065
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ZOMBIE}
+  - outside true
+
+CryptSovereignSpawn:
+  Type: CryptSovereign
+  Worlds: world
+  Chance: 0.012
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ZOMBIE}
+  - outside true
+
+SharpshotSkeletonSpawn:
+  Type: SharpshotSkeleton
+  Worlds: world
+  Chance: 0.05
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SKELETON}
+  - outside true
+
+BoneWarlordSpawn:
+  Type: BoneWarlord
+  Worlds: world
+  Chance: 0.008
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SKELETON}
+  - outside true
+
+VenomspinnerSpawn:
+  Type: Venomspinner
+  Worlds: world
+  Chance: 0.075
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SPIDER}
+  - outside true
+
+NightWidowSpawn:
+  Type: NightWidow
+  Worlds: world
+  Chance: 0.015
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=SPIDER}
+  - outside true
+
+ChargedSapperSpawn:
+  Type: ChargedSapper
+  Worlds: world
+  Chance: 0.04
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=CREEPER}
+  - outside true
+
+StormDetonatorSpawn:
+  Type: StormDetonator
+  Worlds: world
+  Chance: 0.007
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=CREEPER}
+  - outside true
+
+WarpedStalkerSpawn:
+  Type: WarpedStalker
+  Worlds: world,world_the_end
+  Chance: 0.055
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ENDERMAN}
+  - outside true
+
+VoidshadeTitanSpawn:
+  Type: VoidshadeTitan
+  Worlds: world,world_the_end
+  Chance: 0.009
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=ENDERMAN}
+  - outside true
+
+VolleySkirmisherSpawn:
+  Type: VolleySkirmisher
+  Worlds: world
+  Chance: 0.045
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=PILLAGER}
+  - outside true
+
+WarbandCaptainSpawn:
+  Type: WarbandCaptain
+  Worlds: world
+  Chance: 0.0075
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=PILLAGER}
+  - outside true
+
+EmberSentinelSpawn:
+  Type: EmberSentinel
+  Worlds: world_nether
+  Chance: 0.068
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=BLAZE}
+  - outside false
+
+InfernoArchonSpawn:
+  Type: InfernoArchon
+  Worlds: world_nether
+  Chance: 0.011
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=BLAZE}
+  - outside false
+
+AshenBruiserSpawn:
+  Type: AshenBruiser
+  Worlds: world_nether
+  Chance: 0.035
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=PIGLIN}
+  - outside false
+
+GildedWarmongerSpawn:
+  Type: GildedWarmonger
+  Worlds: world_nether
+  Chance: 0.006
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=PIGLIN}
+  - outside false
+
+SandstalkerSpawn:
+  Type: Sandstalker
+  Worlds: world
+  Chance: 0.052
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=HUSK}
+  - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
+
+DunePharaohSpawn:
+  Type: DunePharaoh
+  Worlds: world
+  Chance: 0.0095
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=HUSK}
+  - biome{b=DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS}
+
+FrostboundHunterSpawn:
+  Type: FrostboundHunter
+  Worlds: world
+  Chance: 0.048
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=STRAY}
+  - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}
+
+GlacierRevenantSpawn:
+  Type: GlacierRevenant
+  Worlds: world
+  Chance: 0.0085
+  Action: REPLACE
+  Conditions:
+  - mobtype{t=STRAY}
+  - biome{b=SNOWY_TUNDRA,SNOWY_TAIGA,ICE_SPIKES}

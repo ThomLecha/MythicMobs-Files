@@ -1,0 +1,421 @@
+# Comment utiliser: Copiez ce fichier dans Mobs/ puis rechargez MythicMobs pour activer ces variantes.
+# Équilibrage: Chaque mob Plus est environ 2x plus puissant que sa contrepartie vanilla, et les versions PlusPlus montent à ~4x.
+# Conseils: Ajustez les PV, dégâts ou drops selon l'équipement moyen de vos joueurs et surveillez les zones de spawn à forte densité.
+
+# -- Variantes de Zombie --
+GraveWarden: # Variante Plus
+  Type: ZOMBIE
+  Display: '&6Gardien des Tombes'
+  Health: 60
+  Damage: 7
+  Armor: 6
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
+  - skill{s=graveWardenBattleCry} @self ~onSpawn
+  - skill{s=graveWardenSmash} @target ~onAttack
+  Drops:
+  - graveWardenCharm 0.08
+  Equipment:
+  - IRON_SWORD HAND
+  Options:
+    MovementSpeed: 0.28
+    PreventSunburn: true
+    FollowRange: 30
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+CryptSovereign: # Variante PlusPlus
+  Type: ZOMBIE
+  Display: '&5Souverain des Cryptes'
+  Health: 110
+  Damage: 9
+  Armor: 10
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  Skills:
+  - effect:glow{color=DARK_PURPLE;duration=2147483647} @self ~onSpawn
+  - skill{s=cryptSovereignRitual} @self ~onTimer:120
+  - skill{s=cryptSovereignSpectralWave} @self ~onDamaged
+  Drops:
+  - cryptSovereignSigil 0.05
+  - graveWardenCharm 0.12
+  Equipment:
+  - NETHERITE_SWORD HAND
+  Options:
+    MovementSpeed: 0.3
+    PreventSunburn: true
+    FollowRange: 32
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Skeleton --
+SharpshotSkeleton: # Variante Plus
+  Type: SKELETON
+  Display: '&bTireur Affûté'
+  Health: 40
+  Damage: 5
+  Armor: 4
+  AIGoalSelectors:
+  - 0 clear
+  - 1 ranged
+  Skills:
+  - effect:glow{color=AQUA;duration=2147483647} @self ~onSpawn
+  - skill{s=sharpshotVolley} @target ~onTimer:100
+  Drops:
+  - sharpshotQuiver 0.08
+  Equipment:
+  - BOW HAND
+  Options:
+    MovementSpeed: 0.28
+    FollowRange: 30
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+BoneWarlord: # Variante PlusPlus
+  Type: SKELETON
+  Display: '&3Seigneur des Os'
+  Health: 80
+  Damage: 7
+  Armor: 8
+  AIGoalSelectors:
+  - 0 clear
+  - 1 ranged
+  Skills:
+  - effect:glow{color=DARK_AQUA;duration=2147483647} @self ~onSpawn
+  - skill{s=boneWarlordRain} @target ~onTimer:120
+  - skill{s=sharpshotVolley} @target ~onAttack
+  Drops:
+  - boneWarlordGreatbow 0.05
+  - sharpshotQuiver 0.1
+  Equipment:
+  - BOW HAND
+  - CHAINMAIL_HELMET HEAD
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 32
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Spider --
+Venomspinner: # Variante Plus
+  Type: SPIDER
+  Display: '&2Tisseuse Venimeuse'
+  Health: 36
+  Damage: 6
+  Armor: 2
+  Skills:
+  - effect:glow{color=GREEN;duration=2147483647} @self ~onSpawn
+  - skill{s=venomspinnerSpray} @self ~onAttack
+  Drops:
+  - venomspinnerFang 0.08
+  Options:
+    MovementSpeed: 0.32
+    FollowRange: 28
+    Glowing: true
+    AlwaysShowName: true
+
+NightWidow: # Variante PlusPlus
+  Type: SPIDER
+  Display: '&5Veuve Nocturne'
+  Health: 70
+  Damage: 8
+  Armor: 5
+  Skills:
+  - effect:glow{color=DARK_GREEN;duration=2147483647} @self ~onSpawn
+  - skill{s=nightWidowDash} @target ~onAttack
+  - skill{s=nightWidowSilkField} @self ~onTimer:160
+  Drops:
+  - nightWidowVeil 0.05
+  - venomspinnerFang 0.12
+  Options:
+    MovementSpeed: 0.34
+    FollowRange: 32
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Creeper --
+ChargedSapper: # Variante Plus
+  Type: CREEPER
+  Display: '&aSappeur Chargé'
+  Health: 30
+  Damage: 6
+  Armor: 0
+  Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
+  - skill{s=chargedSapperIgnite} @self ~onTimer:100
+  Drops:
+  - chargedSapperPowder 0.08
+  Options:
+    FuseTicks: 24
+    ExplosionRadius: 3
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+StormDetonator: # Variante PlusPlus
+  Type: CREEPER
+  Display: '&9Détonateur de Tempête'
+  Health: 55
+  Damage: 8
+  Armor: 3
+  Skills:
+  - effect:glow{color=BLUE;duration=2147483647} @self ~onSpawn
+  - skill{s=stormDetonatorPulse} @self ~onTimer:140
+  Drops:
+  - stormDetonatorCore 0.05
+  - chargedSapperPowder 0.1
+  Options:
+    FuseTicks: 22
+    ExplosionRadius: 4
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes d'Enderman --
+WarpedStalker: # Variante Plus
+  Type: ENDERMAN
+  Display: '&dTraqueur Distordu'
+  Health: 70
+  Damage: 9
+  Armor: 3
+  Skills:
+  - effect:glow{color=LIGHT_PURPLE;duration=2147483647} @self ~onSpawn
+  - skill{s=warpedStalkerPhase} @self ~onAttack
+  Drops:
+  - warpedStalkerPearl 0.08
+  Options:
+    MovementSpeed: 0.32
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+VoidshadeTitan: # Variante PlusPlus
+  Type: ENDERMAN
+  Display: '&5Titan Ombreuse'
+  Health: 120
+  Damage: 12
+  Armor: 8
+  Skills:
+  - effect:glow{color=DARK_PURPLE;duration=2147483647} @self ~onSpawn
+  - skill{s=voidshadeGrasp} @target ~onAttack
+  - skill{s=voidshadeGravityWell} @self ~onTimer:180
+  Drops:
+  - voidshadeRelic 0.05
+  - warpedStalkerPearl 0.1
+  Options:
+    MovementSpeed: 0.34
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Pillager --
+VolleySkirmisher: # Variante Plus
+  Type: PILLAGER
+  Display: '&2Voltigeur de Foudre'
+  Health: 48
+  Damage: 7
+  Armor: 4
+  Skills:
+  - effect:glow{color=GRAY;duration=2147483647} @self ~onSpawn
+  - skill{s=skirmisherVolley} @target ~onAttack
+  Drops:
+  - skirmisherBandolier 0.08
+  Equipment:
+  - CROSSBOW HAND
+  Options:
+    MovementSpeed: 0.29
+    FollowRange: 30
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+WarbandCaptain: # Variante PlusPlus
+  Type: PILLAGER
+  Display: '&5Capitaine de Guerre'
+  Health: 88
+  Damage: 9
+  Armor: 8
+  Skills:
+  - effect:glow{color=DARK_RED;duration=2147483647} @self ~onSpawn
+  - skill{s=warbandCaptainVolley} @target ~onAttack
+  - skill{s=warbandCaptainRally} @self ~onTimer:150
+  Drops:
+  - warbandCommandPavise 0.05
+  - skirmisherBandolier 0.12
+  Equipment:
+  - CROSSBOW HAND
+  - IRON_HELMET HEAD
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 32
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Blaze --
+EmberSentinel: # Variante Plus
+  Type: BLAZE
+  Display: '&6Sentinelle de Braise'
+  Health: 52
+  Damage: 7
+  Armor: 4
+  Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
+  - skill{s=emberSentinelBurst} @target ~onTimer:80
+  Drops:
+  - emberSentinelRod 0.08
+  Options:
+    FollowRange: 30
+    Glowing: true
+    AlwaysShowName: true
+
+InfernoArchon: # Variante PlusPlus
+  Type: BLAZE
+  Display: '&cArchon Infernal'
+  Health: 90
+  Damage: 10
+  Armor: 7
+  Skills:
+  - effect:glow{color=RED;duration=2147483647} @self ~onSpawn
+  - skill{s=infernoArchonMeteor} @target ~onTimer:140
+  - skill{s=emberSentinelBurst} @target ~onAttack
+  Drops:
+  - infernoArchonHeart 0.05
+  - emberSentinelRod 0.1
+  Options:
+    FollowRange: 34
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Piglin --
+AshenBruiser: # Variante Plus
+  Type: PIGLIN
+  Display: '&6Brute Cendreuse'
+  Health: 56
+  Damage: 8
+  Armor: 6
+  Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
+  - skill{s=ashenBruiserCharge} @target ~onAttack
+  Drops:
+  - ashenWarbrand 0.08
+  Equipment:
+  - GOLDEN_SWORD HAND
+  Options:
+    MovementSpeed: 0.31
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+GildedWarmonger: # Variante PlusPlus
+  Type: PIGLIN
+  Display: '&eBelluaire Doré'
+  Health: 105
+  Damage: 11
+  Armor: 10
+  Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
+  - skill{s=gildedWarmongerRoar} @self ~onTimer:150
+  - skill{s=gildedWarmongerShockwave} @self ~onDamaged
+  Drops:
+  - gildedWarhorn 0.05
+  - ashenWarbrand 0.12
+  Equipment:
+  - GOLDEN_AXE HAND
+  - GOLDEN_HELMET HEAD
+  Options:
+    MovementSpeed: 0.33
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Husk --
+Sandstalker: # Variante Plus
+  Type: HUSK
+  Display: '&eTraqueur des Sables'
+  Health: 50
+  Damage: 7
+  Armor: 4
+  Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
+  - skill{s=sandstalkerAmbush} @target ~onAttack
+  - skill{s=sandstalkerDustCloud} @self ~onDamaged
+  Drops:
+  - sandstalkerCharm 0.08
+  Options:
+    MovementSpeed: 0.29
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+DunePharaoh: # Variante PlusPlus
+  Type: HUSK
+  Display: '&6Pharaon des Dunes'
+  Health: 92
+  Damage: 10
+  Armor: 9
+  Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
+  - skill{s=dunePharaohQuake} @self ~onTimer:160
+  - skill{s=sandstalkerDustCloud} @self ~onDamaged
+  Drops:
+  - dunePharaohCirclet 0.05
+  - sandstalkerCharm 0.12
+  Options:
+    MovementSpeed: 0.31
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+# -- Variantes de Stray --
+FrostboundHunter: # Variante Plus
+  Type: STRAY
+  Display: '&bChasseur Ligoté'
+  Health: 44
+  Damage: 6
+  Armor: 5
+  Skills:
+  - effect:glow{color=WHITE;duration=2147483647} @self ~onSpawn
+  - skill{s=frostboundVolley} @target ~onTimer:90
+  Drops:
+  - frostboundCloak 0.08
+  Equipment:
+  - BOW HAND
+  Options:
+    MovementSpeed: 0.28
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
+
+GlacierRevenant: # Variante PlusPlus
+  Type: STRAY
+  Display: '&3Revenant Glaciaire'
+  Health: 88
+  Damage: 8
+  Armor: 9
+  Skills:
+  - effect:glow{color=DARK_BLUE;duration=2147483647} @self ~onSpawn
+  - skill{s=glacierRevenantStorm} @self ~onTimer:140
+  - skill{s=frostboundVolley} @target ~onAttack
+  Drops:
+  - glacierRevenantShard 0.05
+  - frostboundCloak 0.1
+  Equipment:
+  - BOW HAND
+  Options:
+    MovementSpeed: 0.3
+    PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true

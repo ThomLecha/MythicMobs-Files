@@ -1,0 +1,184 @@
+# Comment utiliser: Ajoutez ce fichier dans le dossier Items de MythicMobs et rechargez avec /mm reload pour activer ces loot tables thématiques.
+# Équilibrage: Les objets T1 sont conçus pour offrir un petit bonus de survie, tandis que les objets T2 procurent un avantage notable mais situationnel.
+# Conseils: Ajustez les chances de drop dans Mobs.yml selon la progression de votre serveur et combinez avec des quêtes ou succès personnalisés.
+
+# Tier T1 - récompenses pour les variantes Plus
+graveWardenCharm:
+  Id: IRON_SWORD
+  Display: '&aAmulette du Gardien'
+  Lore:
+  - '&7Canalise la vigilance des catacombes.'
+  - '&8Active une protection mineure pendant 45s.'
+  Skills:
+  - skill{s=graveWardenCharmUse} ~onUse
+
+sharpshotQuiver:
+  Id: ARROW
+  Display: '&aCarquois Affûté'
+  Lore:
+  - '&7Les flèches trouvées gagnent en pénétration.'
+  - '&8Bonus: +10% dégâts à l''arc pendant 30s.'
+  PotionEffects:
+  - INCREASE_DAMAGE 1 600
+
+venomspinnerFang:
+  Id: FERMENTED_SPIDER_EYE
+  Display: '&aCroc Venimeux'
+  Lore:
+  - '&7Enduit votre lame d''un poison léger.'
+  Enchantments:
+  - BANE_OF_ARTHROPODS:2
+  Skills:
+  - skill{s=venomspinnerFangProc} ~onUse
+
+chargedSapperPowder:
+  Id: GUNPOWDER
+  Display: '&aPoudre Conductrice'
+  Lore:
+  - '&7Réduit de 20% les dégâts d''explosion entrants.'
+  Skills:
+  - skill{s=chargedSapperPowderUse} ~onUse
+
+warpedStalkerPearl:
+  Id: ENDER_PEARL
+  Display: '&aPerle Distordue'
+  Lore:
+  - '&7Téléportation plus stable, -1 c&oelig;ur de coût en vie.'
+  Skills:
+  - skill{s=warpedPearlStabilize} ~onUse
+
+skirmisherBandolier:
+  Id: CROSSBOW
+  Display: '&aBandelier du Voltigeur'
+  Lore:
+  - '&7Améliore la cadence des arbalètes pendant 45s.'
+  Enchantments:
+  - QUICK_CHARGE:2
+  Skills:
+  - skill{s=skirmisherBandolierUse} ~onUse
+
+emberSentinelRod:
+  Id: BLAZE_ROD
+  Display: '&aBâton Sentinelle'
+  Lore:
+  - '&7Libère des braises lors d''un coup au corps-à-corps.'
+  Enchantments:
+  - FIRE_ASPECT:1
+  Skills:
+  - skill{s=emberRodFlare} ~onHit
+
+ashenWarbrand:
+  Id: GOLDEN_SWORD
+  Display: '&aLame Cendreuse'
+  Lore:
+  - '&7Les coups infligent des brûlures légères.'
+  Enchantments:
+  - SHARPNESS:3
+  Skills:
+  - skill{s=ashenWarbrandIgnite} ~onHit
+
+sandstalkerCharm:
+  Id: SAND
+  Display: '&aCharme du Traque-Sable'
+  Lore:
+  - '&7Immunité temporaire à la faim dans le désert.'
+  PotionEffects:
+  - SATURATION 0 40
+
+frostboundCloak:
+  Id: LEATHER_CHESTPLATE
+  Display: '&aCape Gelée'
+  Lore:
+  - '&7Réduit les dégâts de projectiles de 10%.'
+  Options:
+    Color: 140,140,255
+  Enchantments:
+  - PROJECTILE_PROTECTION:2
+
+# Tier T2 - récompenses pour les variantes PlusPlus
+cryptSovereignSigil:
+  Id: NETHERITE_SCRAP
+  Display: '&bSceau du Souverain'
+  Lore:
+  - '&7Confère un bouclier spectral périodique.'
+  Skills:
+  - skill{s=cryptSigilWard} ~onUse
+
+boneWarlordGreatbow:
+  Id: BOW
+  Display: '&bGrand Arc du Warlord'
+  Lore:
+  - '&7Tire des flèches perforantes.'
+  Enchantments:
+  - POWER:4
+  - PUNCH:2
+  Options:
+    Unbreakable: true
+
+nightWidowVeil:
+  Id: STRING
+  Display: '&bVoile de la Veuve'
+  Lore:
+  - '&7Octroie Invisibilité 5s après un kill.'
+  Skills:
+  - skill{s=nightVeilFade} ~onKill
+
+stormDetonatorCore:
+  Id: HEART_OF_THE_SEA
+  Display: '&bCœur de Tempête'
+  Lore:
+  - '&7Convertit une explosion subie en choc de foudre.'
+  Skills:
+  - skill{s=stormCoreRetaliation} ~onDamaged
+
+voidshadeRelic:
+  Id: DRAGON_BREATH
+  Display: '&bRelique Ombreuse'
+  Lore:
+  - '&7Permet une téléportation courte distance instantanée.'
+  Skills:
+  - skill{s=voidRelicBlink} ~onUse
+
+warbandCommandPavise:
+  Id: SHIELD
+  Display: '&bPavois de Commandement'
+  Lore:
+  - '&7Déploie une défense renforcée pour l''escouade.'
+  Enchantments:
+  - UNBREAKING:3
+  Skills:
+  - skill{s=warbandPaviseFortify} ~onUse
+
+infernoArchonHeart:
+  Id: NETHER_STAR
+  Display: '&bCœur d''Archon'
+  Lore:
+  - '&7Déchaîne une nova de flammes lors d''un coup critique.'
+  Skills:
+  - skill{s=infernoHeartNova} ~onCritical
+
+gildedWarhorn:
+  Id: GOAT_HORN
+  Display: '&bCor de Guerre Doré'
+  Lore:
+  - '&7Inspire une rage dorée aux alliés proches.'
+  Skills:
+  - skill{s=gildedWarhornCall} ~onUse
+
+dunePharaohCirclet:
+  Id: GOLDEN_HELMET
+  Display: '&bDiadème du Pharaon'
+  Lore:
+  - '&7Projette un mur de sable protecteur.'
+  Skills:
+  - skill{s=duneCircletWard} ~onDamaged
+  Enchantments:
+  - PROTECTION:3
+
+glacierRevenantShard:
+  Id: BLUE_ICE
+  Display: '&bÉclat de Glacier'
+  Lore:
+  - '&7Gèle les ennemis proches lorsque vous tombez sous 4 c&oelig;urs.'
+  Skills:
+  - skill{s=glacierShardFreeze} ~onDamaged
