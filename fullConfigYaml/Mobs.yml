@@ -15,6 +15,7 @@ GraveWarden: # Variante Plus
   - 0 clear
   - 1 meleeattack
   Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
   - skill{s=graveWardenBattleCry} @self ~onSpawn
   - skill{s=graveWardenSmash} @target ~onAttack
   Drops:
@@ -26,6 +27,8 @@ GraveWarden: # Variante Plus
     PreventSunburn: true
     FollowRange: 30
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 CryptSovereign: # Variante PlusPlus
   Type: ZOMBIE
@@ -39,6 +42,7 @@ CryptSovereign: # Variante PlusPlus
   - 0 clear
   - 1 meleeattack
   Skills:
+  - effect:glow{color=DARK_PURPLE;duration=2147483647} @self ~onSpawn
   - skill{s=cryptSovereignRitual} @self ~onTimer:120
   - skill{s=cryptSovereignSpectralWave} @self ~onDamaged
   Drops:
@@ -51,6 +55,8 @@ CryptSovereign: # Variante PlusPlus
     PreventSunburn: true
     FollowRange: 32
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Skeleton --
 SharpshotSkeleton: # Variante Plus
@@ -63,6 +69,7 @@ SharpshotSkeleton: # Variante Plus
   - 0 clear
   - 1 ranged
   Skills:
+  - effect:glow{color=AQUA;duration=2147483647} @self ~onSpawn
   - skill{s=sharpshotVolley} @target ~onTimer:100
   Drops:
   - sharpshotQuiver 0.08
@@ -72,6 +79,8 @@ SharpshotSkeleton: # Variante Plus
     MovementSpeed: 0.28
     FollowRange: 30
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 BoneWarlord: # Variante PlusPlus
   Type: SKELETON
@@ -83,6 +92,7 @@ BoneWarlord: # Variante PlusPlus
   - 0 clear
   - 1 ranged
   Skills:
+  - effect:glow{color=DARK_AQUA;duration=2147483647} @self ~onSpawn
   - skill{s=boneWarlordRain} @target ~onTimer:120
   - skill{s=sharpshotVolley} @target ~onAttack
   Drops:
@@ -95,6 +105,8 @@ BoneWarlord: # Variante PlusPlus
     MovementSpeed: 0.3
     FollowRange: 32
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Spider --
 Venomspinner: # Variante Plus
@@ -104,12 +116,15 @@ Venomspinner: # Variante Plus
   Damage: 6
   Armor: 2
   Skills:
+  - effect:glow{color=GREEN;duration=2147483647} @self ~onSpawn
   - skill{s=venomspinnerSpray} @self ~onAttack
   Drops:
   - venomspinnerFang 0.08
   Options:
     MovementSpeed: 0.32
     FollowRange: 28
+    Glowing: true
+    AlwaysShowName: true
 
 NightWidow: # Variante PlusPlus
   Type: SPIDER
@@ -118,6 +133,7 @@ NightWidow: # Variante PlusPlus
   Damage: 8
   Armor: 5
   Skills:
+  - effect:glow{color=DARK_GREEN;duration=2147483647} @self ~onSpawn
   - skill{s=nightWidowDash} @target ~onAttack
   - skill{s=nightWidowSilkField} @self ~onTimer:160
   Drops:
@@ -126,6 +142,8 @@ NightWidow: # Variante PlusPlus
   Options:
     MovementSpeed: 0.34
     FollowRange: 32
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Creeper --
 ChargedSapper: # Variante Plus
@@ -135,6 +153,7 @@ ChargedSapper: # Variante Plus
   Damage: 6
   Armor: 0
   Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
   - skill{s=chargedSapperIgnite} @self ~onTimer:100
   Drops:
   - chargedSapperPowder 0.08
@@ -142,6 +161,8 @@ ChargedSapper: # Variante Plus
     FuseTicks: 24
     ExplosionRadius: 3
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 StormDetonator: # Variante PlusPlus
   Type: CREEPER
@@ -150,6 +171,7 @@ StormDetonator: # Variante PlusPlus
   Damage: 8
   Armor: 3
   Skills:
+  - effect:glow{color=BLUE;duration=2147483647} @self ~onSpawn
   - skill{s=stormDetonatorPulse} @self ~onTimer:140
   Drops:
   - stormDetonatorCore 0.05
@@ -158,6 +180,8 @@ StormDetonator: # Variante PlusPlus
     FuseTicks: 22
     ExplosionRadius: 4
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes d'Enderman --
 WarpedStalker: # Variante Plus
@@ -167,12 +191,15 @@ WarpedStalker: # Variante Plus
   Damage: 9
   Armor: 3
   Skills:
+  - effect:glow{color=LIGHT_PURPLE;duration=2147483647} @self ~onSpawn
   - skill{s=warpedStalkerPhase} @self ~onAttack
   Drops:
   - warpedStalkerPearl 0.08
   Options:
     MovementSpeed: 0.32
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 VoidshadeTitan: # Variante PlusPlus
   Type: ENDERMAN
@@ -181,6 +208,7 @@ VoidshadeTitan: # Variante PlusPlus
   Damage: 12
   Armor: 8
   Skills:
+  - effect:glow{color=DARK_PURPLE;duration=2147483647} @self ~onSpawn
   - skill{s=voidshadeGrasp} @target ~onAttack
   - skill{s=voidshadeGravityWell} @self ~onTimer:180
   Drops:
@@ -189,6 +217,8 @@ VoidshadeTitan: # Variante PlusPlus
   Options:
     MovementSpeed: 0.34
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Pillager --
 VolleySkirmisher: # Variante Plus
@@ -198,6 +228,7 @@ VolleySkirmisher: # Variante Plus
   Damage: 7
   Armor: 4
   Skills:
+  - effect:glow{color=GRAY;duration=2147483647} @self ~onSpawn
   - skill{s=skirmisherVolley} @target ~onAttack
   Drops:
   - skirmisherBandolier 0.08
@@ -207,6 +238,8 @@ VolleySkirmisher: # Variante Plus
     MovementSpeed: 0.29
     FollowRange: 30
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 WarbandCaptain: # Variante PlusPlus
   Type: PILLAGER
@@ -215,6 +248,7 @@ WarbandCaptain: # Variante PlusPlus
   Damage: 9
   Armor: 8
   Skills:
+  - effect:glow{color=DARK_RED;duration=2147483647} @self ~onSpawn
   - skill{s=warbandCaptainVolley} @target ~onAttack
   - skill{s=warbandCaptainRally} @self ~onTimer:150
   Drops:
@@ -227,6 +261,8 @@ WarbandCaptain: # Variante PlusPlus
     MovementSpeed: 0.3
     FollowRange: 32
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Blaze --
 EmberSentinel: # Variante Plus
@@ -236,11 +272,14 @@ EmberSentinel: # Variante Plus
   Damage: 7
   Armor: 4
   Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
   - skill{s=emberSentinelBurst} @target ~onTimer:80
   Drops:
   - emberSentinelRod 0.08
   Options:
     FollowRange: 30
+    Glowing: true
+    AlwaysShowName: true
 
 InfernoArchon: # Variante PlusPlus
   Type: BLAZE
@@ -249,6 +288,7 @@ InfernoArchon: # Variante PlusPlus
   Damage: 10
   Armor: 7
   Skills:
+  - effect:glow{color=RED;duration=2147483647} @self ~onSpawn
   - skill{s=infernoArchonMeteor} @target ~onTimer:140
   - skill{s=emberSentinelBurst} @target ~onAttack
   Drops:
@@ -256,6 +296,8 @@ InfernoArchon: # Variante PlusPlus
   - emberSentinelRod 0.1
   Options:
     FollowRange: 34
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Piglin --
 AshenBruiser: # Variante Plus
@@ -265,6 +307,7 @@ AshenBruiser: # Variante Plus
   Damage: 8
   Armor: 6
   Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
   - skill{s=ashenBruiserCharge} @target ~onAttack
   Drops:
   - ashenWarbrand 0.08
@@ -273,6 +316,8 @@ AshenBruiser: # Variante Plus
   Options:
     MovementSpeed: 0.31
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 GildedWarmonger: # Variante PlusPlus
   Type: PIGLIN
@@ -281,6 +326,7 @@ GildedWarmonger: # Variante PlusPlus
   Damage: 11
   Armor: 10
   Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
   - skill{s=gildedWarmongerRoar} @self ~onTimer:150
   - skill{s=gildedWarmongerShockwave} @self ~onDamaged
   Drops:
@@ -292,6 +338,8 @@ GildedWarmonger: # Variante PlusPlus
   Options:
     MovementSpeed: 0.33
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Husk --
 Sandstalker: # Variante Plus
@@ -301,6 +349,7 @@ Sandstalker: # Variante Plus
   Damage: 7
   Armor: 4
   Skills:
+  - effect:glow{color=YELLOW;duration=2147483647} @self ~onSpawn
   - skill{s=sandstalkerAmbush} @target ~onAttack
   - skill{s=sandstalkerDustCloud} @self ~onDamaged
   Drops:
@@ -308,6 +357,8 @@ Sandstalker: # Variante Plus
   Options:
     MovementSpeed: 0.29
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 DunePharaoh: # Variante PlusPlus
   Type: HUSK
@@ -316,6 +367,7 @@ DunePharaoh: # Variante PlusPlus
   Damage: 10
   Armor: 9
   Skills:
+  - effect:glow{color=GOLD;duration=2147483647} @self ~onSpawn
   - skill{s=dunePharaohQuake} @self ~onTimer:160
   - skill{s=sandstalkerDustCloud} @self ~onDamaged
   Drops:
@@ -324,6 +376,8 @@ DunePharaoh: # Variante PlusPlus
   Options:
     MovementSpeed: 0.31
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 # -- Variantes de Stray --
 FrostboundHunter: # Variante Plus
@@ -333,6 +387,7 @@ FrostboundHunter: # Variante Plus
   Damage: 6
   Armor: 5
   Skills:
+  - effect:glow{color=WHITE;duration=2147483647} @self ~onSpawn
   - skill{s=frostboundVolley} @target ~onTimer:90
   Drops:
   - frostboundCloak 0.08
@@ -341,6 +396,8 @@ FrostboundHunter: # Variante Plus
   Options:
     MovementSpeed: 0.28
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
 
 GlacierRevenant: # Variante PlusPlus
   Type: STRAY
@@ -349,6 +406,7 @@ GlacierRevenant: # Variante PlusPlus
   Damage: 8
   Armor: 9
   Skills:
+  - effect:glow{color=DARK_BLUE;duration=2147483647} @self ~onSpawn
   - skill{s=glacierRevenantStorm} @self ~onTimer:140
   - skill{s=frostboundVolley} @target ~onAttack
   Drops:
@@ -359,3 +417,5 @@ GlacierRevenant: # Variante PlusPlus
   Options:
     MovementSpeed: 0.3
     PreventRandomEquipment: true
+    Glowing: true
+    AlwaysShowName: true
