@@ -51,7 +51,7 @@ sharpshotImpact:
 boneWarlordRain:
   Cooldown: 16
   Skills:
-  - projectile{onTick=boneWarlordTrail;onHit=boneWarlordImpact;type=ARROW;v=20;i=1;hR=1;vR=1} @PlayersInRadius{r=20}
+  - projectile{onTick=boneWarlordTrail;onHit=boneWarlordImpact;bulletType=ARROW;arrowType=NORMAL;v=20;i=1;hR=1;vR=1} @PlayersInRadius{r=20}
 
 boneWarlordTrail:
   Skills:
@@ -132,7 +132,7 @@ voidshadeGravityWell:
 skirmisherVolley:
   Cooldown: 8
   Skills:
-  - projectile{onTick=skirmisherTrail;onHit=skirmisherImpact;type=ARROW;v=19;i=2;hR=1;vR=1} @NearestPlayer{r=22}
+  - projectile{onTick=skirmisherTrail;onHit=skirmisherImpact;bulletType=ARROW;arrowType=NORMAL;v=19;i=2;hR=1;vR=1} @NearestPlayer{r=22}
 
 skirmisherTrail:
   Skills:
@@ -146,7 +146,7 @@ skirmisherImpact:
 warbandCaptainVolley:
   Cooldown: 12
   Skills:
-  - projectile{onTick=warbandCaptainTrail;onHit=skirmisherImpact;type=ARROW;v=20;i=3;hR=1;vR=1} @PlayersInRadius{r=24}
+  - projectile{onTick=warbandCaptainTrail;onHit=skirmisherImpact;bulletType=ARROW;arrowType=NORMAL;v=20;i=3;hR=1;vR=1} @PlayersInRadius{r=24}
 
 warbandCaptainTrail:
   Skills:
@@ -166,7 +166,7 @@ warbandCaptainRally:
 emberSentinelBurst:
   Cooldown: 8
   Skills:
-  - projectile{onTick=emberSentinelTrail;onHit=emberSentinelImpact;type=SMALL_FIREBALL;v=16;i=3} @NearestPlayer{r=20}
+  - projectile{onTick=emberSentinelTrail;onHit=emberSentinelImpact;bulletType=SMALL_FIREBALL;v=16;i=3} @NearestPlayer{r=20}
 
 emberSentinelTrail:
   Skills:
@@ -180,7 +180,7 @@ emberSentinelImpact:
 infernoArchonMeteor:
   Cooldown: 20
   Skills:
-  - projectile{onHit=infernoArchonImpact;type=FIREBALL;v=20;i=1} @NearestPlayer{r=20}
+  - projectile{onHit=infernoArchonImpact;bulletType=FIREBALL;v=20;i=1} @NearestPlayer{r=20}
   - potion{type=FIRE_RESISTANCE;duration=100;level=0} @self
 
 infernoArchonImpact:
